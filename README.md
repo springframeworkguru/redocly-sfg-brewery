@@ -23,7 +23,6 @@ Bundles the definition to the dist folder.
 Validates the definition.
 
 ## Contribution Guide
-
 Below is a sample contribution guide. The tools
 in the repository don't restrict you to any
 specific structure. Adjust the contribution guide

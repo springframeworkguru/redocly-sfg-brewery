@@ -1,0 +1,17 @@
+get:
+  description: Get Beer by UPC Code
+  summary: Get Beer by UPC
+  operationId: getByUPCCode
+  parameters:
+    - $ref: ../components/parameters/Upc.yaml
+  tags:
+    - Beer Service
+  responses:
+    '200':
+      description: Get Beer by UPC Response
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Beer.yaml
+    '404':
+      description: Not Found

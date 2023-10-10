@@ -1,0 +1,60 @@
+parameters:
+  - $ref: ../components/parameters/CustomerId.yaml
+  - $ref: ../components/parameters/Page.yaml
+  - $ref: ../components/parameters/PageSize.yaml
+get:
+  description: List Orders
+  summary: List Orders
+  operationId: listCustomerOrders
+  tags:
+    - Order Service
+  responses:
+    '200':
+      description: List Order Reponse
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BeerOrderPagedList.yaml
+    '404':
+      description: Not Found
+post:
+  description: Place Order
+  summary: Place Order
+  operationId: createOrder
+  tags:
+    - Order Service
+  requestBody:
+    required: false
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/BeerOrder.yaml
+  responses:
+    '201':
+      description: Order Created
+      headers:
+        Location:
+          description: Reference to created Order
+          schema:
+            type: string
+            format: uri
+    '400':
+      description: Bad Reqeust
+    '404':
+      description: Not Found
+    '409':
+      description: Conflict
+  callbacks:
+    orderStatusChange:
+      '{$request.body#/orderStatusCallback}':
+        description: Webhook post to reecive notifcations of order status changes.
+        summary: WebHook for Order Status Change
+        post:
+          summary: Post back for order status change.
+          requestBody:
+            $ref: ../components/requestBodies/OrderStatusCallback.yaml
+          responses:
+            '200':
+              description: Okay
+            '400':
+              description: Bad Request

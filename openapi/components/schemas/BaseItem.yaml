@@ -1,0 +1,17 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    readOnly: true
+  version:
+    type: integer
+    readOnly: true
+  createdDate:
+    type: string
+    format: date-time
+    readOnly: true
+  lastModifiedDate:
+    type: string
+    format: date-time
+    readOnly: true

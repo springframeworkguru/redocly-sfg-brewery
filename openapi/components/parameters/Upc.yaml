@@ -1,0 +1,6 @@
+name: upc
+in: path
+description: UPC Code
+required: true
+schema:
+  type: string

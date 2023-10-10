@@ -1,0 +1,20 @@
+type: object
+allOf:
+  - $ref: ./BaseItem.yaml
+required:
+  - customerId
+properties:
+  customerId:
+    type: string
+    format: uuid
+  customerRef:
+    type: string
+  beerOrderLines:
+    type: array
+    items:
+      $ref: ./BeerOrderLine.yaml
+  orderStatus:
+    $ref: ./OrderStatusEnum.yaml
+  orderStatusCallbackUrl:
+    type: string
+    format: uri

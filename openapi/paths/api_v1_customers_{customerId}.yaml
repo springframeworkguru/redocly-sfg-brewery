@@ -1,0 +1,40 @@
+parameters:
+  - $ref: ../components/parameters/CustomerId.yaml
+get:
+  description: Get customer by Id
+  summary: Get Customer by Id
+  operationId: getByCustomerId
+  tags:
+    - Order Service
+  responses:
+    '200':
+      description: HTTP Okay
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Customer.yaml
+    '404':
+      description: Not Found
+put:
+  description: Update Customer by Id
+  summary: Update Customer by Id
+  operationId: UpdateByCustomerId
+  tags:
+    - Order Service
+  parameters:
+    - $ref: ../components/parameters/CustomerId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Customer.yaml
+  responses:
+    '204':
+      description: Beer Updated
+    '400':
+      description: Bad Reqeust
+    '404':
+      description: Not Found
+    '409':
+      description: Conflict

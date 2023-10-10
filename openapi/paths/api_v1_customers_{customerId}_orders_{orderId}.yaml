@@ -1,0 +1,18 @@
+parameters:
+  - $ref: ../components/parameters/CustomerId.yaml
+  - $ref: ../components/parameters/OrderId.yaml
+get:
+  description: Get Order By Id
+  summary: Get Order by id
+  operationId: getCustomerOrderById
+  tags:
+    - Order Service
+  responses:
+    '200':
+      description: HTTP Okay
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BeerOrder.yaml
+    '404':
+      description: Customer Id or Order Id Not Found

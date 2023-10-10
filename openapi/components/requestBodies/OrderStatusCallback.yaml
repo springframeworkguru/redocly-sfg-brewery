@@ -1,0 +1,11 @@
+description: Order Status Update
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        orderId:
+          type: string
+          format: uuid
+        orderStatus:
+          $ref: ../schemas/OrderStatusUpdate.yaml

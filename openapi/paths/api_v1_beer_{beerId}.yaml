@@ -1,0 +1,54 @@
+get:
+  description: Get Beer by Id
+  summary: Get Beer by Id
+  operationId: getBeerById
+  tags:
+    - Beer Service
+  parameters:
+    - $ref: ../components/parameters/BeerId.yaml
+    - $ref: ../components/parameters/ShowInventoryOnHand.yaml
+  responses:
+    '200':
+      description: Get Beer by id Response
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Beer.yaml
+    '404':
+      description: Not Found
+put:
+  description: Update Beer by Id
+  summary: Update Beer by Id
+  operationId: updateBeerByIdV1
+  tags:
+    - Beer Service
+  parameters:
+    - $ref: ../components/parameters/BeerId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Beer.yaml
+  responses:
+    '204':
+      description: Beer Updated
+    '400':
+      description: Bad Reqeust
+    '404':
+      description: Not Found
+    '409':
+      description: Conflict
+delete:
+  summary: Delete Beer
+  description: Delete Beer by Id
+  operationId: v1DeleteBeer
+  tags:
+    - Beer Service
+  parameters:
+    - $ref: ../components/parameters/BeerId.yaml
+  responses:
+    '204':
+      description: Delelted
+    '404':
+      description: Not Found

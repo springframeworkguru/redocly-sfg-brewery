@@ -1,0 +1,6 @@
+name: beerStyle
+in: query
+description: Beer Style
+required: false
+schema:
+  $ref: ../schemas/BeerStyleEnum.yaml

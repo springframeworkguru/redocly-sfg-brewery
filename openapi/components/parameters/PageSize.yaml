@@ -1,0 +1,8 @@
+name: pageSize
+in: query
+description: Page size.
+required: false
+schema:
+  type: integer
+  format: int32
+  default: 25

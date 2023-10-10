@@ -1,0 +1,27 @@
+post:
+  description: Register as new customer
+  summary: Register as new customer
+  operationId: createNewCustomer
+  tags:
+    - Order Service
+  requestBody:
+    required: false
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Customer.yaml
+  responses:
+    '201':
+      description: Customer Created
+      headers:
+        Location:
+          description: Reference to created customer
+          schema:
+            type: string
+            format: uri
+    '400':
+      description: Bad Reqeust
+    '404':
+      description: Not Found
+    '409':
+      description: Conflict

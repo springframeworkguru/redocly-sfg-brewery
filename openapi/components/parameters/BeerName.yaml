@@ -1,0 +1,6 @@
+name: beerName
+in: query
+description: Beer Name
+required: false
+schema:
+  type: string

@@ -1,0 +1,20 @@
+type: object
+allOf:
+  - $ref: ./BaseItem.yaml
+required:
+  - beerName
+  - beerStyle
+  - price
+  - upc
+properties:
+  beerName:
+    type: string
+  beerStyle:
+    $ref: ./BeerStyleEnum.yaml
+  upc:
+    type: string
+  quantityOnHand:
+    type: integer
+  price:
+    type: string
+    format: decimal

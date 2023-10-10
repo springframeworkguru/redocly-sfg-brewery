@@ -1,0 +1,7 @@
+name: showInventoryOnHand
+in: query
+description: Show Inventory On Hand
+required: false
+schema:
+  type: boolean
+  default: false

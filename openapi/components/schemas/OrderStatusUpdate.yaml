@@ -1,0 +1,11 @@
+type: object
+allOf:
+  - $ref: ./BaseItem.yaml
+properties:
+  orderId:
+    type: string
+    format: uuid
+  customerRef:
+    type: string
+  orderStatus:
+    $ref: ./OrderStatusEnum.yaml

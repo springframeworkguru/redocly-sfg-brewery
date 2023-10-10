@@ -1,0 +1,18 @@
+parameters:
+  - $ref: ../components/parameters/CustomerId.yaml
+  - $ref: ../components/parameters/OrderId.yaml
+put:
+  description: Pickup Order
+  summary: Pickup Order
+  operationId: pickupCustomerOrder
+  tags:
+    - Order Service
+  responses:
+    '204':
+      description: No Content
+    '400':
+      description: Bad Reqeust
+    '404':
+      description: Not Found
+    '409':
+      description: Conflict

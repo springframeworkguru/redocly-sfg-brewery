@@ -72,6 +72,13 @@ servers:
     description: Local Host
   - url: http://api.springframework.guru
     description: Demo API
+x-tagGroups:
+  - name: Beer API Operations
+    tags:
+      - Beer Service
+  - name: Order API Operations
+    tags:
+      - Order Service
 tags:
   - name: Beer Service
     description: |

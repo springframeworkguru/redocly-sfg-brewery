@@ -62,6 +62,8 @@ info:
   license:
     name: GNU GPLv3
     url: https://www.gnu.org/licenses/gpl.txt
+  x-logo: 
+    url: https://springframework.guru/wp-content/uploads/2015/02/banner728BlackBackground.png  
   contact:
     name: John Thompson
     url: https://springframework.guru

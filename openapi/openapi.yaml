@@ -56,6 +56,9 @@ info:
     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    #### Source Code
+    The source code for this API Specification can be [found on Github](https://github.com/springframeworkguru/redocly-sfg-brewery). 
   license:
     name: GNU GPLv3
     url: https://www.gnu.org/licenses/gpl.txt

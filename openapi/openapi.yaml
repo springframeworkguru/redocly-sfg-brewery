@@ -29,6 +29,27 @@ info:
     - Item 3
     - Item 4
 
+    To complete the migration please use script `migrate.sh`. 
+
+    #### Javascript Example
+    ```
+      const query = new URLSearchParams({
+        pageNumber: '1',
+        pageSize: '25',
+        beerName: 'string',
+        beerStyle: 'LAGER',
+        showInventoryOnHand: 'false'
+      }).toString();
+      
+      const resp = await fetch(
+        `http://api.springframework.guru/api/v1/beer?${query}`,
+        {method: 'GET'}
+      );
+      
+      const data = await resp.text();
+      console.log(data);
+    ```
+
     ### Heading 3
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 

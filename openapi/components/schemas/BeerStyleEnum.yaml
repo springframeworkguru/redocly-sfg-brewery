@@ -10,3 +10,15 @@ enum:
   - IPA
   - PALE_ALE
   - SAISON
+title: The Style of the beer
+x-enumDescriptions:
+  LAGER: A type of beer conditioned at low temperatures.
+  PILSNER: Pilsner style beer
+  STOUT: Stout style beer
+  GOSE: Gose style beer
+  PORTER: Porter style beer
+  ALE: Ale style beer
+  WHEAT: Wheat style beer
+  IPA: India Pale Ale style beer. **My Favorite!**
+  PALE_ALE: Pale Ale style beer. *My Second Favorite!*
+  SAISON: Saison style beer

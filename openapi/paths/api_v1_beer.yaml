@@ -4,6 +4,7 @@ get:
   operationId: listBeers
   tags:
     - Beer Service
+  # x-hideTryItPanel: true   
   parameters:
     - $ref: ../components/parameters/Page.yaml
     - $ref: ../components/parameters/PageSize.yaml

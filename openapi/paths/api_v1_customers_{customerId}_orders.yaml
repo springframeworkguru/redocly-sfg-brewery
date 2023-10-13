@@ -51,7 +51,7 @@ post:
         summary: WebHook for Order Status Change
         post:
           summary: Post back for order status change.
-          description: This is a post back for the order status change.
+         # description: This is a post back for the order status change.
           requestBody:
             $ref: ../components/requestBodies/OrderStatusCallback.yaml
           responses:

@@ -6,6 +6,7 @@ extends:
   - recommended
 rules:
   no-unused-components: error
+  operation-description: error
 theme:
   openapi:
     htmlTemplate: ./docs/index.html

@@ -43,7 +43,6 @@ delete:
   summary: Delete Beer
   description: Delete Beer by Id
   operationId: v1DeleteBeer
- # x-audience: Internal
   tags:
     - Beer Service
   parameters:

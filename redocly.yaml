@@ -2,6 +2,8 @@
 apis:
   sample@v1: 
     root: openapi/openapi.yaml
+  sample@v2: 
+    root: openapi/openapiv2.yaml  
 extends:
   - recommended
 rules:

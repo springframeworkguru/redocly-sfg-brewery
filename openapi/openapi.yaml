@@ -102,6 +102,8 @@ security:
 paths:
   /api/v1/beer:
     $ref: paths/api_v1_beer.yaml
+  /api/v2/beer:
+      $ref: paths/api_v2_beer.yaml  
   /api/v1/beer/{beerId}:
     $ref: paths/api_v1_beer_{beerId}.yaml
   /api/v1/beerUpc/{upc}:

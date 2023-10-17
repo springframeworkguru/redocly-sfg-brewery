@@ -1,0 +1,104 @@
+openapi: 3.1.0
+info:
+  version: '2.0'
+  title: SFG Brewery API
+  description: | 
+    # Heading 1 - This is the Brewery API Documentation
+    **Lorem ipsum dolor sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    **My Ordered List**
+    1. Item 1
+    2. Item 2
+    3. Item 3
+    4. Item 4
+
+    ## Heading 2 
+    *Lorem ipsum dolor sit amet*, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    **My Unordered List**
+    - Item 1
+    - Item 2
+    - Item 3
+    - Item 4
+
+    To complete the migration please use script `migrate.sh`. 
+
+    #### Javascript Example
+    ```
+      const query = new URLSearchParams({
+        pageNumber: '1',
+        pageSize: '25',
+        beerName: 'string',
+        beerStyle: 'LAGER',
+        showInventoryOnHand: 'false'
+      }).toString();
+      
+      const resp = await fetch(
+        `http://api.springframework.guru/api/v1/beer?${query}`,
+        {method: 'GET'}
+      );
+      
+      const data = await resp.text();
+      console.log(data);
+    ```
+
+    ### Heading 3
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    #### Source Code
+    The source code for this API Specification can be [found on Github](https://github.com/springframeworkguru/redocly-sfg-brewery). 
+  license:
+    name: GNU GPLv3
+    url: https://www.gnu.org/licenses/gpl.txt
+  x-logo: 
+    url: https://springframework.guru/wp-content/uploads/2015/02/banner728BlackBackground.png  
+  contact:
+    name: John Thompson
+    url: https://springframework.guru
+servers:
+  - url: http://localhost:8080
+    description: Local Host
+  - url: http://api.springframework.guru
+    description: Demo API
+x-tagGroups:
+  - name: Beer API Operations
+    tags:
+      - Beer Service
+  - name: Order API Operations
+    tags:
+      - Order Service
+tags:
+  - name: Beer Service
+    description: |
+      # Brewey Beer Operations
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      ## Heading 2 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  - name: Order Service
+    description: Brewery Order Operations
+security:
+  - {}
+paths:
+  /api/v2/beer:
+      $ref: paths/api_v2_beer.yaml  

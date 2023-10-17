@@ -10,7 +10,7 @@ properties:
   beerName:
     type: string
   beerStyle:
-    $ref: ./BeerStyleEnum.yaml
+    $ref: ./BeerStyleEnumV2.yaml
   upc:
     type: string
   quantityOnHand:

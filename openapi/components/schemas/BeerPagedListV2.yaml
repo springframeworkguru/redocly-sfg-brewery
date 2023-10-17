@@ -1,0 +1,8 @@
+type: object
+allOf:
+  - $ref: ./PagedResponse.yaml
+properties:
+  content:
+    type: array
+    items:
+      $ref: ./BeerV2.yaml
